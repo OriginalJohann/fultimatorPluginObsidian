@@ -1,0 +1,30 @@
+{
+  "name": "fultimator-plugin",
+  "version": "0.1.0",
+  "description": "Fultimator as a native Obsidian plugin: adversary designer and compendium backed by vault Markdown files.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "obsidian",
+    "fabula-ultima",
+    "fultimator"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "0.25.0",
+    "esbuild-svelte": "^0.8.2",
+    "obsidian": "latest",
+    "svelte": "^4.2.0",
+    "tslib": "2.6.2",
+    "typescript": "5.4.5",
+    "vitest": "^2.1.0"
+  }
+}

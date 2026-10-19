@@ -4,3 +4,5 @@ scratchpad
 .agents
 
 skills-lock.json
+
+*.log

@@ -1,0 +1,9 @@
+{
+	"id": "fultimator",
+	"name": "Fultimator",
+	"version": "0.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "Fabula Ultima adversary designer and compendium backed by your vault's Markdown files.",
+	"author": "OriginalJohann",
+	"isDesktopOnly": false
+}

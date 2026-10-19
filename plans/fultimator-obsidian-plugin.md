@@ -308,20 +308,20 @@ first save; template readable → else plugin disables itself with a clear notic
 
 ## 12. Task Breakdown (implementation order)
 
-| # | Task | Depends on |
-|---|---|---|
-| T1 | Scaffold `plugin/` (esbuild + Svelte template, manifest, empty Plugin class, builds `main.js`) | – |
-| T2 | `core/model.ts` + `core/template.ts` (template SOT reader) | T1 |
-| T3 | `core/serialize.ts` + `core/parse.ts` incl. `~`-grammar + round-trip unit tests | T2 |
-| T4 | `core/sp.ts` (ported calc functions) + golden-value tests | T2 |
-| T5 | `core/filename.ts` + atomic write helper + unit tests | T2 |
-| T6 | `core/import-npc.ts` (TypeNpc JSON mapping) + tests | T3, T4 |
-| T7 | Settings UI (`adversaryFolder`, `generatorMarker`, `templatePath`) | T1 |
-| T8 | Designer view (Svelte) wired to core (new/save/open, lazy check, SP panel) | T3–T7 |
-| T9 | Compendium view (index, search, filter, duplicate/derive) | T3, T7 |
-| T10 | JSON import flow (command + mapping report) | T6, T8 |
-| T11 | Fixture vault + full test suite green | T3–T6 |
-| T12 | Smoke test in `flosFabUBox` (theme rendering, full loop) | T8–T10 |
+| # | Task | Depends on | Status |
+|---|---|---|---|
+| T1 | Scaffold `plugin/` (esbuild + Svelte template, manifest, empty Plugin class, builds `main.js`) | – | ✅ |
+| T2 | `core/model.ts` + `core/template.ts` (template SOT reader) | T1 | ✅ |
+| T3 | `core/serialize.ts` + `core/parse.ts` incl. `~`-grammar + round-trip unit tests | T2 | ✅ |
+| T4 | `core/sp.ts` (ported calc functions) + golden-value tests | T2 | ✅ |
+| T5 | `core/filename.ts` + atomic write helper + unit tests | T2 | ✅ |
+| T6 | `core/import-npc.ts` (TypeNpc JSON mapping) + tests | T3, T4 | ✅ |
+| T7 | Settings UI (`adversaryFolder`, `generatorMarker`, `templatePath`) | T1 | ✅ |
+| T8 | Designer view (Svelte) wired to core (new/save/open, lazy check, SP panel) | T3–T7 | ⏳ |
+| T9 | Compendium view (index, search, filter, duplicate/derive) | T3, T7 | ⏳ |
+| T10 | JSON import flow (command + mapping report) | T6, T8 | ⏳ |
+| T11 | Fixture vault + full test suite green | T3–T6 | ✅ (27/27) |
+| T12 | Smoke test in `flosFabUBox` (theme rendering, full loop) | T8–T10 | ⏳ |
 
 ---
 
